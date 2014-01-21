@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Morse With Pals</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="find_matches">Find Matches</string>
+    <string name="start_match">Start Match</string>
+    <string name="auto_match">Auto Match</string>
+    <string name="current_matches">Current Matches</string>
+    <string name="sign_in_explanation">You must sign in to Google+ to play Morse With Pals</string>
+    <string name="translate">Translate</string>
+    <string name="to_morse">To Morse</string>
+    <string name="to_english">To English</string>
+    <string name="time_left_label">In %1$d seconds</string>
+    <string name="tree">Tree</string>
+    <string name="list">List</string>
+    <string name="sos">SOS</string>
+    <string name="challenge">Challenge:</string>
+    <string name="convert_to_morse">Convert English Text To Morse in less than %1$d seconds</string>
+    <string name="im_ready">I\'m Ready!</string>
+    <string name="backspace">backspace</string>
+    <string name="success_title">Success!</string>
+    <string name="failure_title">Failure!</string>
+    <string name="failure_message">You didn\'t encode the text in time. Better luck next time.</string>
+    <string name="success_message">You encoded the message in time! You are on your way to greatness.</string>
+    <string name="status_multiplayer_error_not_trusted_tester">Anyone you invite must be a trusted tester</string>
+    <string name="match_error_already_rematched">This rematch has already been started!</string>
+    <string name="client_reconnect_required">Games client reconnect required</string>
+    <string name="network_error_operation_failed">Network error: Operation failed</string>
+    <string name="internal_error">Internal error</string>
+    <string name="unexpected_status">Unexpected status</string>
+    <string name="match_error_inactive_match">This match is inactive.</string>
+    <string name='match_error_locally_modified'>This match has locally-modified data.  This operation cannot be performed until the match is sent to the server.</string>
+    <string name="current_score">Your current score is: %1$s</string>
+    <string name="congratulations">You Won! Your final score was: %1$s</string>
+    <string name="consolation">You win some and you lose some. You lost this one. Better luck next time.</string>
+
+    <string-array name="morse_letters">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+        <item>F</item>
+        <item>G</item>
+        <item>H</item>
+        <item>I</item>
+        <item>J</item>
+        <item>K</item>
+        <item>L</item>
+        <item>M</item>
+        <item>N</item>
+        <item>O</item>
+        <item>P</item>
+        <item>Q</item>
+        <item>R</item>
+        <item>S</item>
+        <item>T</item>
+        <item>U</item>
+        <item>V</item>
+        <item>W</item>
+        <item>X</item>
+        <item>Y</item>
+        <item>Z</item>
+    </string-array>
+
+    <string-array name="morse_words">
+        <item>Apple</item>
+        <item>Box</item>
+        <item>Blue</item>
+        <item>Red</item>
+        <item>Green</item>
+        <item>Brown</item>
+        <item>Orange</item>
+        <item>At</item>
+        <item>The</item>
+        <item>Park</item>
+        <item>Monkey</item>
+        <item>Horse</item>
+        <item>Paperclip</item>
+        <item>Water</item>
+        <item>Short</item>
+        <item>Sting</item>
+        <item>Wrong</item>
+        <item>False</item>
+        <item>True</item>
+        <item>Awesome</item>
+        <item>Parse</item>
+        <item>Shirt</item>
+        <item>Calculator</item>
+        <item>Keyboard</item>
+        <item>Goat</item>
+        <item>Eye</item>
+        <item>Finger</item>
+    </string-array>
+</resources>

@@ -1,0 +1,66 @@
+apply plugin: 'android'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion '19.0.1'
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 19
+        versionCode 1
+        versionName "1.0"
+    }
+//    signingConfigs {
+//        release {
+//            storeFile file(keyStore)
+//            storePassword keyAliasPassword
+//            keyAlias keyAlias
+//            keyPassword keyStorePassword
+////            storeFile file('/Users/dustin/Documents/AndroidKeystores/funintended.jks')
+////            storePassword 'N0te$ync'
+////            keyAlias 'Morse With Pals'
+////            keyPassword 'N0te$ync'
+//        }
+//    }
+    signingConfigs {
+        debug {
+            project.ext.loadSign = true
+        }
+        release {
+            project.ext.loadSign = true
+        }
+    }
+    buildTypes {
+        release {
+            runProguard true
+            zipAlign true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+            signingConfig signingConfigs.release
+        }
+        debug {
+            signingConfig signingConfigs.release
+
+        }
+    }
+}
+
+if ( project.ext.loadSign ) {
+    Properties p = new Properties ()
+    p.load ( new FileInputStream ( rootProject.file ( 'keys/sign.properties' ) ) )
+
+    android.signingConfigs.release.storeFile file ( p.keyStore )
+    android.signingConfigs.release.storePassword p.password
+    android.signingConfigs.release.keyAlias p.keyAlias
+    android.signingConfigs.release.keyPassword p.password
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:19.0.1'
+    compile 'com.android.support:appcompat-v7:19.0.1'
+    compile 'com.google.android.gms:play-services:4.1.32'
+    compile files('build/exploded-bundles/ComGoogleAndroidGmsPlayServices4132.aar/classes.jar')
+    compile project(':BaseGameUtils')
+    compile 'com.jakewharton:butterknife:4.0.+'
+    compile 'com.squareup:otto:1.3.+'
+    compile 'com.google.code.gson:gson:2.2.+'
+}
